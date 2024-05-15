@@ -8,6 +8,7 @@ Take Home Assignment Android Developer Internship
 - **Backend**: Firebase
 
 ## ScreenShoot of App
-![Frame 17](https://github.com/Ad12-Ad/CountDownTimer/assets/76468958/9fc3c785-3dd6-4741-9712-9495d5754190)
+![Frame 17 (2)](https://github.com/Ad12-Ad/CountDownTimer/assets/76468958/964d39a7-92c2-4cc1-bd6b-45cba0b2e23a)
+
 
 
