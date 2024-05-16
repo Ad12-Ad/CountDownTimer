@@ -3,8 +3,8 @@
 Take Home Assignment Android Developer Internship
 
 ## Tech Stack
-
-- **Frontend**: Android development using Kotlin
+- **Language**: Kotlin
+- **Frontend**: Jetpack Compose
 - **Backend**: Firebase
 
 ## ScreenShoot of App
