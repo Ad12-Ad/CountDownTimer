@@ -74,7 +74,7 @@ class SignUp : ComponentActivity() {
                         modifier = Modifier.fillMaxSize(),
                         color = MaterialTheme.colorScheme.background
                     ) {
-                        SignUpPage(context = this)
+                        SignUpPage()
                     }
                 }
             }
@@ -85,7 +85,7 @@ class SignUp : ComponentActivity() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun SignUpPage(context: Context){
+fun SignUpPage(){
     val custom_fontFamily = FontFamily(
         Font(com.example.timer.R.font.nunito_bold, FontWeight.Bold),
         Font(com.example.timer.R.font.nunito_extrabold, FontWeight.ExtraBold),
@@ -331,7 +331,8 @@ private fun signUpUser(context: Context, email: String, password: String, firstN
                 // Sign in success
                 // You can add further actions here like navigating to another screen
                 // or displaying a success message.
-                val intent = Intent(context, MainActivity::class.java)
+                // Save the user's authentication state
+                val intent = Intent(context, SignIn::class.java)
                 context.startActivity(intent)
             } else {
                 // If sign in fails, display a message to the user.
