@@ -86,19 +86,7 @@ class SignIn : ComponentActivity() {
                         modifier = Modifier.fillMaxSize(),
                         color = MaterialTheme.colorScheme.background
                     ) {
-                        // Define the boolean state using remember
-                        var boolean = remember { mutableStateOf(true) }
-
-                        // Check the value of the boolean state
-                        if (!boolean.value) {
-                            // Navigate to the desired destination, for example, by calling a function
-                            Navigation()
-
-                            // Update the boolean state to indicate that navigation has occurred
-                            boolean.value = false
-                        }else{
-                            SignInPage()
-                        }
+                        SignInPage()
                     }
                 }
             }
@@ -373,22 +361,4 @@ private fun signInUser(context: Context, email: String, password: String) {
                 ).show()
             }
         }
-}
-
-@Composable
-fun Navigation(){
-    val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = "splash_screen" ){
-            composable("main_screen"){
-            val auth: FirebaseAuth = Firebase.auth
-            val currentUser = auth.currentUser
-            val context = LocalContext.current
-            if (currentUser != null) {
-                // If user is already signed in, navigate to MainActivity
-                App()
-            }else {
-                SignInPage()
-            }
-        }
-    }
 }
